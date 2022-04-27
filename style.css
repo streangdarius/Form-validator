@@ -1,0 +1,120 @@
+/* Using this font on all projects */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #ef315f;
+  --secondary-color: #1a1a1a;
+  --white-color: #fbfbfd;
+  --background-color: #efecec;
+  --gray-light-color: #cecece;
+  --gray-dark-color: #787878;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Container style */
+.container {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  box-shadow: rgba(46, 46, 46, 0.12) 0px 2px 4px 0px,
+    rgba(46, 46, 46, 0.32) 0px 2px 16px 0px;
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+/* Form style */
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: var(--gray-dark-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.form-control input {
+  border: 2px solid var(--gray-light-color);
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--gray-dark-color);
+  transition: 0.25s ease-in-out;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background: none;
+}
+
+.form-control input:-autofill {
+    background-color: #1a1a1a;
+  }
+
+.form-control.success input,
+textarea {
+  color: var(--secondary-color);
+}
+
+.form-control.error input,
+textarea {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.form-control small {
+  color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.submit-button {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--secondary-color);
+}
